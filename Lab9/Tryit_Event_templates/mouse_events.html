@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Mouse Events</title>
+    
+
+    <style>
+      body {
+        font-size: 100%;
+        margin: 1.25em;
+      }
+      
+      img { margin: 1.25em;}
+    </style>
+    
+    <script>
+		function init(){
+			var image = document.getElementById("zero");
+			image.onmouseover = showAnswer;
+			image.onmouseout = blurAnswer;
+		}
+		
+		function showAnswer() {
+			var image = document.getElementById("zero");
+			var name = "./images/" + image.id + ".jpg";
+			image.src = name;
+		}
+		
+		function blurAnswer(){
+			var image = document.getElementById("zero");
+			image.src = "./images/" + image.id + "blur.jpg";
+		}
+		
+		window.onload = init;
+      
+    </script>
+    
+	</head>
+	<body>
+    
+    <img src="./images/zeroblur.jpg" id="zero">
+    
+	</body>
+</html>
+
+

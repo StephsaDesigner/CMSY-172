@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Colors</title>
+</head>
+<body>
+	<script>
+		var colors = ['red','green','blue'];
+		
+		//start of function
+		function showColors(anArray) {
+			document.write(anArray.length + '<br />');
+
+			for(var i=0; i<anArray.length; i++){
+				document.write(anArray[i] + '<br />');
+			}
+			document.write('<br />');
+		} //end of function
+		
+		showColors(colors); //display first iteration of colors
+		
+		colors.push('orange','purple','black'); //adding new colors
+		
+		showColors(colors); //Second call with new values
+		
+		colors.unshift('yellow');//adding yellow to index 0
+		
+		showColors(colors); //Third call with yellow is added
+		
+		colors.splice(0, 1);//removing yellow from index 0
+		
+		showColors(colors); //Forth call yellow is removed
+		
+		colors.splice(5, 1, 'yellow');//adding yellow to the end of the array
+		
+		showColors(colors); //Fiveth call yellow is added to the end an replaces black
+		
+	</script>
+</body>
+</html> 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Example: Using an object as a function argument</title>
+
+	</head>
+	<body>
+   
+    <script>
+        /*  CMSY 172
+
+          Example of using an object as a function argument.
+          The is passed by reference.  Any changes made to the object
+          in the function will be reflected in the original object.
+          
+          Note the value for major is changed from within the changeMajor function.
+        */
+
+        //use to insert line breaks in display statements
+        var linebreak = "<br><br>";
+
+        //Create and initialize student object
+        student = {
+          name : "Joe",
+          major: "English"
+          
+        }; //end oject declaration
+
+        //function to change a students major using an object as an argument
+        function changeMajor(studentObj, newMajor) { 
+          if (newMajor != " ") {
+            studentObj.major = newMajor;
+          }
+        }  //end function
+
+        //Begin processing
+        document.write("This is an example of using an object as a function argument..." + linebreak + linebreak);
+
+        //display the student object properties before the changeMajor function call
+        document.write("Before the function call..." + linebreak);
+        document.write("Current major: " + student.major + linebreak);
+
+        //changeMajor function call
+        document.write(linebreak + "changeMajor function call..." + linebreak + linebreak);
+        changeMajor(student, "Psychology");  //function call
+
+        //display the student oject property values after changeMajor function call
+        document.write("After the function call... (Major changed)" + linebreak);
+        document.write("Current major: " + student.major + linebreak);
+    
+    
+    </script>
+    
+	</body>
+</html>
+
+

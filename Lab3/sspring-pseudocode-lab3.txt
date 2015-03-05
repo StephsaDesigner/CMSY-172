@@ -1,0 +1,20 @@
+Get time
+Set is Morning to false
+Set is Afternoon to false
+Set is Evening to false
+
+While time does not equal 12am then: 
+
+if time is less than 12pm and morning is false
+	display "Good Morning!"
+
+else time is greater than 12pm or less than 5pm
+	display "Good Afternoon!"
+	
+else time is greater than 5pm or less than 10pm 
+	display "Good Evening!"
+
+else time is greater than 10pm
+	diplay "Good Night!"
+	
+add 1 to time

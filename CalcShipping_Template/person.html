@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Midterm Question 2</title>
+</head>
+<body>
+<p id="p1">
+
+</p>
+
+<script>
+	var person = {
+		firstName: "John", 
+		lastName: "Doe",
+		id: 555,
+		age: 50,
+		eyeColor: "brown",
+		
+		fullName: function(){
+			return this.firstName+" "+this.lastName + " is ";
+		},
+		
+		pStatistics: function(){
+			return this.age+" years old with "+this.eyeColor+" eyes.";
+		}
+	}
+	
+	document.getElementById("p1").innerHTML = person.fullName() + person.pStatistics();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		
+		<title>Event Object</title>
+
+	</head>
+	<body>
+  
+   
+		<a href="#" id="clickme">Display event object information</a>
+	
+	
+		<script>
+
+			function displayEventObject(eventObj){
+				document.write(eventObj.type + "<br>");
+			}
+			
+			var clicked = document.getElementById("clickme");
+			clicked.onclick = displayEventObject;
+					  
+		</script>
+    
+	</body>
+</html>
+
+

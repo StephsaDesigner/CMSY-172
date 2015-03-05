@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Calculate Shipping and Handling</title>
+<script type="text/javascript">
+function calcShipping() {
+  //write your code here
+  var price = document.getElementById("priceEtnered").value;
+  var totalPrice = 0;
+  
+  if (price <= 25){
+	totalPrice = Number(price) + 1.5;
+	alert("Your total is $"+totalPrice);
+	} else{
+		totalPrice = Number(price)+(price*10/100);
+		alert("Your total is $"+totalPrice);
+	}
+ }
+</script>
+</head>
+<body>
+<h1>Calculate Shipping and Handling</h1>
+<form action="" name="sale">
+<p>Purchase Price <input type="text" name="price" id="priceEtnered" value="0" />&nbsp;
+<input type="button" value="Calculate Shipping and Handling" onclick="calcShipping()" /></p>
+</form>
+</body>
+</html>

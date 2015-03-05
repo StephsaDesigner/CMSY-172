@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"> 
+    <title>Planets</title> 
+    
+    <style>
+      .redtext { color: red; } 
+      .largefont { font-size: 64px;}
+	  .smallfont { font-size: 8px;}
+    </style>
+    
+    <script>
+    
+      function pageLoaded() {
+        var planetaryMonitor = document.getElementById("monitor");
+        planetaryMonitor.setAttribute("class", "largefont");
+		
+		var planetaryMonitor = document.getElementById("redplanet");
+        planetaryMonitor.setAttribute("class", "smallfont");
+		planetaryMonitor.setAttribute("class", "redtext");
+      }
+      
+     window.onload = pageLoaded;
+      
+    </script>
+    
+  </head>
+  <body>
+  
+    <h1 id="monitor">Plantary Monitoring System</h1>
+    
+    <h2>Green Planet</h2>
+    <p id="greenplanet">All is well</p> 
+    
+    <h2>Red Planet</h2>
+    <p id="redplanet">Nothing to report</p> 
+    
+    <h2>Blue Planet</h2>
+    <p id="blueplanet">All systems A-OK</p>
+    
+  </body>
+</html>

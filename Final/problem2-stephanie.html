@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Final-Problem 2</title>
+</head>
+<body>
+	<p id="output"></p>
+	<script>
+		var today = new Date();
+		var newYear = new Date("January 1, 2015");
+		
+		var msPerDay = 24 * 60 * 60 * 1000;
+		var days = (newYear.getTime() - today.getTime()) / msPerDay;
+		var daysLeft = Math.floor(days);
+		if (daysLeft > 365) {
+        yearsLeft = Math.floor(daysLeft / 365);
+        daysLeft = daysLeft % 365;
+		}
+	
+		var hours = (days-daysLeft)*24;
+		var hrsLeft = Math.floor(hours);
+		var mins =(hours - hrsLeft) * 60;
+		var minsLeft = Math.floor(mins);
+		var secLeft = Math.floor((mins - minsLeft) * 1000);
+		
+		function happyNewYear(){
+		var outStr = daysLeft+ " days " + hrsLeft + " hours " + minsLeft + " minutes " + secLeft + " seconds until the new year!";
+		document.getElementById("output").innerHTML = outStr;
+		}
+	
+		happyNewYear();
+		
+	</script>
+</body>
+</html>

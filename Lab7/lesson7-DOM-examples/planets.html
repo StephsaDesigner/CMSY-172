@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"> 
+    <title>Planets</title> 
+    
+    <style>
+      .redtext { color: red; } 
+    </style>
+    
+  </head>
+  <body>
+  
+    <h1 id="monitor">Plantary Monitoring System</h1>
+    
+    <h2>Green Planet</h2>
+    <p id="greenplanet">All is well</p> 
+    
+    <h2>Red Planet</h2>
+    <p id="redplanet">Nothing to report</p> 
+    
+    <h2>Blue Planet</h2>
+    <p id="blueplanet">All systems A-OK</p>
+    
+    <script>
+    
+      function redAlert() {
+        var planet = document.getElementById("redplanet");
+        planet.innerHTML = "Red Alert: hit by phaser fire!"; 
+        planet.setAttribute("class", "redtext");
+      }
+	  
+	  redAlert();
+      
+    </script>
+    
+  </body>
+</html>

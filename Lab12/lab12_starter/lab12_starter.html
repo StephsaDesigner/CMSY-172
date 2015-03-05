@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>CMSY 172 - Lab 12 - Student Object Constructor Function</title>
+
+	</head>
+	<body>
+   
+    <script>
+      /*  CMSY 172  - Student object constructor function
+
+          student object properties:
+            - firstName
+            - lastName
+            - major
+            - prevMajor
+            - gpa
+          
+          student object methods:
+           - displayStudentRecord 
+           - setMajor
+           - setGPA 
+           - getMajor 
+
+      */
+
+      //use to insert line breaks after display statements
+		var linebreak = "<br><br>";
+		
+   
+      //Student object constructor function  - use with the new keyword to create new student objects.
+		function Student(firstName, lastName, major, prevMajor, gpa) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.major = major;
+			this.prevMajor = prevMajor;
+			this.gpa = gpa;
+			
+			this.displayStudentRecord = function(){
+				document.write("Student: " + this.firstName + " " + this.lastName + linebreak + "Current major: " + this.major + linebreak + "Previous major: " + this.prevMajor + linebreak + "GPA: " + this.gpa + linebreak);
+			};//end student object constructor function
+
+      //Begin processing:
+		this.getMajor = function(){
+			return this.major;
+		};
+		
+		this.setMajor = function(newMajor){
+			if (newMajor){
+				this.prevMajor = this.major;
+				this.major = newMajor;
+			} else {
+				document.write(linebreak + "Student major update failed. You must enter a valid major for the update to execute." + linebreak);
+			}
+		};
+		
+		this.setGPA = function(newGPA){
+			if(newGPA){
+				this.gpa = newGPA;
+			} else{
+				document.write(linebreak + "Student GPA update failed. You must enter a valid GPA for the update to execute." + linebreak);
+			}
+		}
+	}
+      //  - Create and display three student object instances, change the major and the gpa for all three instances, display the updated instances.
+    
+    var student = new Student("Joe", "Smith", "History", "none", "0");
+	student.displayStudentRecord();
+	student.setMajor("English"); 
+	student.setGPA(3.5); 
+	student.displayStudentRecord();
+
+	var student2 = new Student("Jane", "Smith", "Computer Science", "none", "0");
+	student2.displayStudentRecord();
+	student2.setMajor("History"); 
+	student2.setGPA(3.5); 
+	student2.displayStudentRecord();
+	
+	var student3 = new Student("Mary", "Jones", "Art History", "none", "0");
+	student3.displayStudentRecord();
+	student3.setMajor("History"); 
+	student3.setGPA(3.5); 
+	student3.displayStudentRecord();
+    </script>
+    
+	</body>
+</html>
+
+

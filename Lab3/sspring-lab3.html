@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stephanie Spring Lab 2</title>
+</head>
+<body>
+<h1>What Time Is It?</h1>
+<script>
+var time = 0;
+var isMorning = false;
+var isAfternoon = false;
+var isEvening = false;
+var isNight = false;
+
+
+while (time < 24){
+ 
+	if (time < 12 && isMorning === false){
+		isMorning = true;
+		document.write ("Good Morning!<br/>");
+		} else if ( time < 17 && isAfternoon === false){
+			isAfternoon = true;
+			document.write ("Good Afternoon!<br/>");
+			} else if ( time < 22 && isEvening === false){
+				isEvening = true;
+				document.write ("Good Evening!<br/>");
+				} else if ( time < 24 && isNight === false){
+					isNight = true;
+					document.write ("Good Night!<br/>");
+				}
+	time++;
+}
+</script>
+</body>
+</html>	

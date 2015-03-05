@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Example: Using an object property as a function argument</title>
+
+	</head>
+	<body>
+   
+    <script>
+      /*  CMSY 172
+
+          Example of using an object property as a function argument.
+          The property is treated the same way a standard variable is.  
+          It is passed by value.  No changes are made to the original object
+          values.
+      */
+
+      //use to insert line breaks in display statements
+      var linebreak = "<br><br>";
+            
+      //Create and initialize student object
+      student = {
+
+        name : "Joe",
+        major: "English"
+        
+      }; //end object
+
+      //function to change a students major using an object property as an argument
+      function changeMajor(newMajor) { 
+        if (newMajor != " ") {
+          var major = newMajor;
+        }
+      } //end function
+
+
+      //Begin processing
+      document.write("This is an example of using an object property as a function argument..." + linebreak + linebreak);
+
+      //display the student object values before the changeMajor function call
+      document.write("Before the function call..." + linebreak);
+      document.write("Current major: " + student.major + linebreak);
+
+      //changeMajor function call
+      document.write(linebreak + "changeMajor function call..." + linebreak + linebreak);
+      changeMajor(student.major, "Psychology");  //function call
+
+      //display the student object values after the changeMajor function call
+      document.write("After the function call... (no change)" + linebreak);
+      document.write("Current major: " + student.major + linebreak);
+    
+    </script>
+    
+	</body>
+</html>
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  
+  <!-- Function as a return value from another function - Tryit example for the add button -->
+	<title>JavaScript Calculator</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+	<!-- Custom CSS -->
+  <link href="css/custom.css" rel="stylesheet">
+	
+</head>
+<body>
+	<div class="main-content">
+  
+    <!--  Use the following form to simulate a calculator.  
+          The button clicked will perform the math operation for the two 
+          operands that are input in the form fields.  The result of the
+          operation will be displayed in the answer field.
+    -->
+		<form name="calculator" id="calculator" role="form">
+			<h3>Simple Calculator</h3>
+      
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 form-group">
+            <label for="operand1">Operand 1</label>
+            <input type="text" name="operand1" id="operand1" size="4" class="form-control text-right">
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 form-group">
+            <label for="operand2">Operand 2</label>
+            <input type="text" name="operand2" id="operand2" size="4" class="form-control text-right">
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 form-group">
+            <label for="answer">Answer</label>
+            <input type="text" name="answer" id="answer" size="4" class="form-control text-right">
+          </div>
+        </div>
+      
+      <div class="form-group">
+        <button type="button" id="add" class="btn btn-primary btn-lg">&plus;</button> 
+        <button type="button" id="subtract" class="btn btn-primary btn-lg">&minus;</button>
+        <button type="button" id="multiply" class="btn btn-primary btn-lg">&times;</button>
+        <button type="button" id="divide" class="btn btn-primary btn-lg">&divide;</button>
+      </div>
+      
+      <div class="form-group">
+        <button id="clear" type="reset" class="btn btn-primary center-block">Clear</button>
+      </div>
+		</form>
+	</div>
+
+	<script>
+		
+    /*  Set up variables to hold the form input and output element objects. 
+        These are used to get input from the user to perform the specified 
+        math calculation.
+    */
+		var operand1 = document.getElementById("operand1");
+		var operand2 = document.getElementById("operand2");
+		var answer = document.getElementById("answer");
+    
+    
+    /* Wrapper function: This function is used to assign event handler functions 
+       for the four calculator buttons: plus, minus, multiply, and divide.  It returns the
+       appropriate event function handler for the specified operation parameter.
+       
+       Note: The JavaScript Number function is used to convert the operand values from
+       strings to numbers before the math operation is performed.
+    */
+    function getOperation(operation) {
+    
+      if (operation === "add") {
+        return function (){
+            answer.value = Number(operand1.value) + Number(operand2.value);
+        }
+      }
+	  
+	  if (operation === "subtract") {
+		return function (){
+			answer.value = Number(operand1.value) - Number(operand2.value);
+			}
+		}
+    }
+    
+    /* Call the getOperation wrapper function for the specified math function.  The appropriate 
+       event handler function will be returned and assigned to the onclick event property for the 
+       appropriate math operation button element object.
+    */ 
+    document.getElementById("add").onclick = getOperation("add");
+	document.getElementById("subtract").onclick = getOperation("subtract");
+     
+    </script>
+    
+	</body>
+</html>
+
+

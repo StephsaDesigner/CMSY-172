@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    
+		<!-- CMSY172 - Normal Function Example -->
+		
+		<title>Normal Function</title>
+
+	</head>
+	<body>
+  
+     <p id="output"></p>
+    
+    <script>
+        
+        function noise(sound) { 
+                output.innerHTML = output.innerHTML + sound + "<br>";
+        }
+            
+        var output = document.getElementById("output");
+        
+        noise("Grrrrr");
+		
+		function setNoise(sound) {             
+            return function () {
+                output.innerHTML = output.innerHTML + sound + "<br>";
+            }
+        }
+      
+        var output = document.getElementById("output");
+        
+        var makeGrowl = setNoise("Grrrrrrr");
+        var makeRoar = setNoise("Rrrrrrrr");
+        
+    </script>
+    
+	</body>
+</html>
+
+

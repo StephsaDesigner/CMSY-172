@@ -1,0 +1,13 @@
+Get time
+
+if time is less than 12pm
+	display "Good Morning!"
+
+else time is greater than 12pm or less than 5pm
+	display "Good Afternoon!"
+	
+else time is greater than 5pm or less than 10pm 
+	display "Good Evening!"
+
+else time is greater than 10pm
+	diplay "Good Night!"

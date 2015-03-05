@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    
+		<!-- Stephanie Spring - Lab #4 Starter Template: Functionalized - Single Greeting per time period - Creation Date: 9/16/14 -->
+		
+		<title>JS Lab 4: Functional Greetings</title>
+
+	</head>
+	<body>
+		
+    <script>
+       <!-- Script to check the hour of the day and display a time period appropriate greeting. -->
+      var hour = 0;
+      
+      <!-- Boolean variables used to check if the greeting has already been displayed for the current time period. -->
+      var isMorning = false;
+      var isAfternoon = false;
+      var isEvening = false;
+      var isNight = false;
+
+      <!-- Place greeting function here -->
+	  function greeting(timeOfDay){
+		document.write("Good " + timeOfDay + "<br />");
+		return true;
+	  }
+      
+      <!-- Process the greetings as long as it doesn't go past midnight. (one 24 hour cycle) -->
+      while (hour < 24) {
+      
+          <!-- Determine the hour of the day and if the greeting has already been displayed for the current time period -->
+          <!-- Use nested if statements to determine the time of day, and whether the greeting has already been displayed. -->
+          if (hour < 12 ) {
+              
+              if(isMorning === false){
+				  greetingTime = "Morning";
+                  isMorning = greeting(greetingTime);
+              }
+              
+          } else if (hour < 18) {
+              
+             if(isAfternoon === false){
+                  greetingTime = "Afternoon";
+                  isAfternoon = greeting(greetingTime);
+              }
+              
+          } else if (hour < 22) {
+              
+              if(isEvening === false){
+                  greetingTime = "Evening";
+                  isEvening = greeting(greetingTime);
+              }
+              
+          } else {
+              if(isNight === false){
+                  greetingTime = "Night";
+                  isNight = greeting(greetingTime);
+              }
+          }
+          
+          hour++;
+          
+      }
+    
+    </script>
+    
+	</body>
+</html>
+
+

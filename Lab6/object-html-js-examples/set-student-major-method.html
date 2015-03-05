@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Example: Using object methods - part 3</title>
+
+	</head>
+	<body>
+   
+    <script>
+      /*  CMSY 172 
+
+          Example of using an object with methods.
+           - setMajor method
+       
+      */
+
+      //use to insert line breaks after display statements
+      var linebreak = "<br><br>";
+            
+      //Create and initialize the student object
+      student = {
+        name : "Joe",
+        major: "English",
+        
+        
+        //Method to set the student object's major property
+        setMajor : function (newMajor) { 
+          if (newMajor != " ") {
+            this.major = newMajor;
+          }
+        }
+        
+        
+        
+      }; //end object
+
+      //Begin processing
+
+      //display the student object values before the setMajor method call
+      document.write("Student object before the setMajor method call..." + linebreak);
+      document.write(student.major + linebreak);
+
+      //setMajor method call
+      document.write(linebreak + "setMajor method call..." + linebreak + linebreak);
+      student.setMajor("Psychology");  //function call
+
+      //display the student object values after the setMajor method call using the getMajor method
+      document.write("Student object after the setMajor method call..." + linebreak);
+      document.write(student.major + linebreak);
+
+    
+    
+    </script>
+    
+	</body>
+</html>
+
+

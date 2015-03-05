@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Final-Problem 1</title>
+</head>
+<body>
+	<script>
+		var dayIs = "Today is: ";
+		var abbreviationIS = "Today's 3 letter abbreviation day is: ";
+		
+		var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+		
+		var today = new Date();
+		var shortName =	daysOfWeek[today.getDay()];
+		
+		function getDayName(name){
+			var name;
+			
+			document.write(dayIs+daysOfWeek[today.getDay()]+"<br />");
+			document.write(abbreviationIS+name.substring(0,3));
+
+		}
+	
+		getDayName(shortName);
+		
+	</script>
+</body>
+</html>

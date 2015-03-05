@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 6</title>
+
+	</head>
+	<body>
+   
+    <script>
+      /*  CMSY 172 
+
+          student object methods:
+           - displayMajor method
+           - setMajor method
+           - getMajor method
+
+      */
+
+      //use to insert line breaks after display statements
+      var linebreak = "<br><br>";
+            
+      //Create and initialize the student object
+      student = {
+        firstName : "Joe",
+		lastName : "Shmoe",
+        major: "English",
+		gpa: 0,
+		preMajor: "none",
+        
+        //Method to display the student object's major property 
+        displayStudentRecord : function(){
+          document.write("Student: " + this.firstName +" "+ this.lastName + linebreak);
+		  document.write("Current major: " + this.major + linebreak);
+		  document.write("Previous major: " + this.preMajor + linebreak);
+		  document.write("GPA: " + this.gpa + linebreak);
+        }, 
+        
+        //Method to return the value of the student object's major
+        getMajor : function(){
+          return this.major;
+        },
+        
+        //Method to set the student object's major property
+        setMajor : function (newMajor) { 
+          if (newMajor != " ") {
+			this.preMajor = this.major;
+            this.major = newMajor;
+          }
+        },
+		
+		setGPA : function (newGPA){
+			this.gpa = newGPA;
+		}
+        
+      }; //end object
+
+      //Begin processing
+		student.displayStudentRecord(); //display current info
+		
+		student.setMajor("Basket Weaving!"); //change major to Basket Weaving :P
+		
+		student.setGPA(3.5); //set gpa to 3.5
+		
+		student.displayStudentRecord(); //display new info
+     
+    </script>
+    
+	</body>
+</html>
+
+

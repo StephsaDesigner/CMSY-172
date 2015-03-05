@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    
+		<!-- CMSY172 - Nested Function and Scope Example -->
+		
+		<title>Nested Function Scope</title>
+
+	</head>
+	<body>
+  
+     <p id="output"></p>
+    
+    <script>
+        
+       function noise(sound) {
+       
+            function makeNoise() {
+                output.innerHTML = output.innerHTML + sound + "<br>";
+            }
+            
+            makeNoise();
+        }
+           
+        var output = document.getElementById("output");
+        
+        noise("Grrrr");
+        
+        makeNoise(); //out of scope - inaccessible outside the noise function
+        
+    </script>
+    
+	</body>
+</html>
+
+

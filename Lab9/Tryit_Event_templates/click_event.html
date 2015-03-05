@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		
+		<title>click event</title>
+
+	</head>
+	<body>
+  
+    
+		<a href="#" id="clickme">Click me and see what happens...</a>
+	
+	
+		<script>
+			function clickHandler(){
+				alert("You clicked me");
+			}
+			
+			var clickedLink = document.getElementById("clickme");
+			clickedLink.onclick = clickHandler;
+		</script>
+    
+	</body>
+</html>
+
+

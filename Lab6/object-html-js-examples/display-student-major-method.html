@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Example: Using object methods - Part 1</title>
+
+	</head>
+	<body>
+   
+    <script>
+    /*  CMSY 172
+
+        Example of using object methods.
+          - displayMajor method
+
+    */
+
+      //use to insert line breaks after display statements
+      var linebreak = "<br><br>";
+            
+      //Create and initialize the student object
+      student = {
+        name : "Joe",
+        major: "English",
+        
+         //Method to display the student object's major property 
+        displayMajor: function(){
+          document.write("Current major: " + this.major + linebreak);
+        } 
+        
+      }; //end object
+
+      //Begin processing
+
+      //display the student object's name property
+      student.displayMajor();
+    
+    </script>
+    
+	</body>
+</html>
+
+

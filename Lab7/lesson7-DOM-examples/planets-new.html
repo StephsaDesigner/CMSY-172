@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"> 
+    <title>Planets</title> 
+    
+    <style>
+      .redtext { color: red; } 
+    </style>
+    
+  </head>
+  <body>
+    <h2>Green Planet</h2>
+    <p id="greenplanet">All is well</p> 
+    
+    <h2>Red Planet</h2>
+    <p id="redplanet">Nothing to report</p> 
+    
+    <h2>Blue Planet</h2>
+    <p id="blueplanet">All systems A-OK</p>
+    
+    <script>
+    
+      var planet = "unknown";
+      
+      function setPlanet(warnPlanet) {
+        warnPlanet = document.getElementById(warnPlanet);
+        return warnPlanet;
+      }
+    
+      function redAlert(warnPlanet) {
+        warnPlanet.innerHTML = "Red Alert: hit by phaser fire!"; 
+        warnPlanet.setAttribute("class", "redtext");
+      }
+      
+      function allClear(warnPlanet) {
+        warnPlanet.innerHTML = warnPlanet.innerHTML + "<br>All Clear: Enemy ship has been neutralized!"; 
+      }
+      
+      planet = setPlanet("redplanet");
+      
+    </script>
+    
+  </body>
+</html>
